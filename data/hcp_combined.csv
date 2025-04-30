@@ -1,0 +1,101 @@
+hcp_id,name,specialty,city,preferred_channel,contacted
+10001,Dr. Anna Krüger,Cardiology,Hannover,Phone,True
+10002,Dr. Paul Becker,General Practice,Düsseldorf,Phone,False
+10003,Dr. Paul Klein,Cardiology,Düsseldorf,E-Mail,True
+10004,Dr. Lukas Braun,Cardiology,Köln,E-Mail,False
+10005,Dr. Katharina Weber,General Practice,Hamburg,E-Mail,False
+10006,Dr. Johanna Neumann,Internal Medicine,Hamburg,E-Mail,True
+10007,Dr. Marie Klein,General Practice,Köln,E-Mail,False
+10008,Dr. Sophie Hoffmann,Internal Medicine,Düsseldorf,Phone,False
+10009,Dr. Sarah Hoffmann,General Practice,Düsseldorf,Video Call,True
+10010,Dr. Clara Wagner,Cardiology,Frankfurt,Phone,False
+10011,Dr. Daniel Richter,Endocrinology,Dresden,Phone,True
+10012,Dr. Max Müller,General Practice,München,E-Mail,False
+10013,Dr. Clara Wagner,General Practice,Berlin,Video Call,True
+10014,Dr. Leon Neumann,Internal Medicine,Hamburg,Phone,False
+10015,Dr. Sarah Wagner,Endocrinology,München,E-Mail,False
+10016,Dr. Anna Braun,General Practice,Hamburg,Veeva CLM,False
+10017,Dr. Anna Klein,Endocrinology,München,Phone,True
+10018,Dr. Lukas Neumann,Internal Medicine,Frankfurt,Video Call,True
+10019,Dr. Max Hoffmann,General Practice,Hamburg,E-Mail,True
+10020,Dr. Lisa Zimmermann,General Practice,Frankfurt,Veeva CLM,True
+10021,Dr. Leon Schneider,Endocrinology,Köln,Phone,True
+10022,Dr. Jan Krüger,Endocrinology,Köln,Phone,True
+10023,Dr. Lukas Schwarz,Internal Medicine,Hamburg,Video Call,True
+10024,Dr. Johanna Zimmermann,General Practice,Hannover,E-Mail,False
+10025,Dr. Anna Koch,General Practice,Leipzig,Video Call,False
+10026,Dr. Max Schwarz,General Practice,Leipzig,Video Call,False
+10027,Dr. Clara Wolf,Internal Medicine,Düsseldorf,E-Mail,True
+10028,Dr. Clara Schmidt,Endocrinology,Berlin,Phone,False
+10029,Dr. Clara Becker,Cardiology,Frankfurt,Phone,True
+10030,Dr. Jan Meyer,Internal Medicine,München,E-Mail,True
+10031,Dr. Leon Becker,Cardiology,Hannover,E-Mail,True
+10032,Dr. Laura Wolf,Internal Medicine,Dresden,Video Call,True
+10033,Dr. Max Wolf,Cardiology,Hamburg,Veeva CLM,True
+10034,Dr. Tim Weber,Internal Medicine,Frankfurt,Video Call,False
+10035,Dr. Lisa Wagner,Cardiology,Hannover,E-Mail,True
+10036,Dr. Clara Schwarz,Cardiology,Stuttgart,Phone,False
+10037,Dr. Lukas Schröder,Cardiology,Berlin,Veeva CLM,True
+10038,Dr. Moritz Fischer,Internal Medicine,Berlin,Phone,False
+10039,Dr. Nico Neumann,General Practice,Köln,Video Call,True
+10040,Dr. Felix Schmidt,Cardiology,Frankfurt,Veeva CLM,False
+10041,Dr. Max Schneider,General Practice,Köln,Phone,True
+10042,Dr. Lisa Weber,Endocrinology,Dresden,Video Call,True
+10043,Dr. Lukas Müller,General Practice,Düsseldorf,Veeva CLM,True
+10044,Dr. Felix Schwarz,Cardiology,Frankfurt,Veeva CLM,True
+10045,Dr. Katharina Klein,Endocrinology,Stuttgart,E-Mail,False
+10046,Dr. Paul Wagner,General Practice,München,Veeva CLM,False
+10047,Dr. Felix Müller,Endocrinology,Köln,Veeva CLM,True
+10048,Dr. Daniel Becker,General Practice,Dresden,Video Call,True
+10049,Dr. Marie Schäfer,Internal Medicine,Leipzig,Veeva CLM,False
+10050,Dr. Laura Müller,Cardiology,Frankfurt,E-Mail,True
+10051,Dr. Max Schneider,Cardiology,Frankfurt,Veeva CLM,True
+10052,Dr. Paul Koch,Endocrinology,Leipzig,Video Call,True
+10053,Dr. Nico Müller,Cardiology,Hamburg,Video Call,True
+10054,Dr. Max Klein,Cardiology,Hamburg,Video Call,True
+10055,Dr. Johanna Richter,Cardiology,Düsseldorf,E-Mail,False
+10056,Dr. Paul Meyer,Cardiology,Hannover,Video Call,True
+10057,Dr. Nico Becker,Cardiology,Hamburg,Phone,False
+10058,Dr. Marie Klein,Internal Medicine,Leipzig,E-Mail,True
+10059,Dr. Felix Schmidt,Endocrinology,Stuttgart,Veeva CLM,True
+10060,Dr. Lisa Schwarz,Endocrinology,Hamburg,Phone,True
+10061,Dr. Daniel Krüger,Cardiology,München,Video Call,True
+10062,Dr. Johanna Müller,Endocrinology,Berlin,E-Mail,True
+10063,Dr. Sarah Schneider,Cardiology,Stuttgart,Video Call,True
+10064,Dr. Marie Schröder,Endocrinology,Köln,Video Call,True
+10065,Dr. Lisa Fischer,General Practice,Köln,Phone,True
+10066,Dr. Leon Schröder,Endocrinology,Köln,Veeva CLM,True
+10067,Dr. Jan Schneider,General Practice,Berlin,E-Mail,False
+10068,Dr. Anna Neumann,General Practice,Stuttgart,Veeva CLM,True
+10069,Dr. Laura Schröder,Internal Medicine,Düsseldorf,Veeva CLM,False
+10070,Dr. Leon Schwarz,Endocrinology,Hamburg,Veeva CLM,False
+10071,Dr. Paul Müller,General Practice,Frankfurt,Phone,True
+10072,Dr. Johanna Neumann,Cardiology,Stuttgart,Video Call,False
+10073,Dr. Lukas Fischer,Internal Medicine,Hannover,Veeva CLM,True
+10074,Dr. Anna Fischer,Endocrinology,Berlin,Phone,True
+10075,Dr. Laura Schröder,Internal Medicine,Köln,Phone,True
+10076,Dr. Jan Wagner,General Practice,Dresden,E-Mail,True
+10077,Dr. Tim Schwarz,Endocrinology,Leipzig,Video Call,True
+10078,Dr. Lisa Hoffmann,Internal Medicine,Hamburg,E-Mail,False
+10079,Dr. Clara Hoffmann,General Practice,Berlin,E-Mail,True
+10080,Dr. Clara Meyer,Cardiology,Leipzig,Veeva CLM,True
+10081,Dr. Tim Fischer,Cardiology,Leipzig,Veeva CLM,True
+10082,Dr. Jan Fischer,Cardiology,Düsseldorf,Video Call,False
+10083,Dr. Leon Weber,Endocrinology,München,Phone,True
+10084,Dr. Marie Müller,Endocrinology,Stuttgart,Video Call,True
+10085,Dr. Felix Schäfer,Cardiology,Frankfurt,Video Call,True
+10086,Dr. Jan Becker,Cardiology,Berlin,E-Mail,True
+10087,Dr. Johanna Wagner,Cardiology,Berlin,E-Mail,False
+10088,Dr. Sarah Koch,Endocrinology,Düsseldorf,Veeva CLM,True
+10089,Dr. Felix Klein,General Practice,Dresden,Video Call,True
+10090,Dr. Katharina Krüger,Internal Medicine,Hamburg,Veeva CLM,True
+10091,Dr. Julia Schwarz,General Practice,Köln,E-Mail,True
+10092,Dr. Nico Neumann,General Practice,Hamburg,Video Call,True
+10093,Dr. Sarah Schröder,Cardiology,Köln,Video Call,True
+10094,Dr. Katharina Becker,General Practice,Düsseldorf,Phone,True
+10095,Dr. Clara Klein,Endocrinology,Frankfurt,Phone,True
+10096,Dr. Leon Koch,Internal Medicine,Dresden,Veeva CLM,True
+10097,Dr. Felix Schmidt,Internal Medicine,München,Veeva CLM,False
+10098,Dr. Felix Schäfer,Cardiology,Stuttgart,Phone,True
+10099,Dr. Julia Weber,Internal Medicine,München,Phone,True
+10100,Dr. Anna Koch,Cardiology,Frankfurt,E-Mail,True
