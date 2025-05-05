@@ -133,7 +133,7 @@ def create_interface():
         3. **AI-Powered Personalization**: Generate tailored outreach messages
         4. **Google Maps Discovery**: Find new healthcare professionals in target locations
         
-        For more information, see the [GitHub repository](https://github.com/yourusername/nova-hcp-assistant).
+        For more information, see the [GitHub repository](https://github.com/AI-Agent-Incubator-Month/cdt-nbse).
         """)
     
     return interface
