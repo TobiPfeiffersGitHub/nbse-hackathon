@@ -18,27 +18,20 @@ def process_message(message, history):
 
 def search_hcps(specialty, city):
     """Search for HCPs with specific specialty and city."""
-    query = {}
-    if specialty:
-        query['specialty'] = specialty
-    if city:
-        query['city'] = city
-        
-    results = nova._query_hcp_database(query)
+    # Use the correct parameter names for the FindHCPs tool
+    results = nova.maps_finder.search_and_get_details(query=specialty, location=city)
     
-    if isinstance(results, str):
-        return results
+    if not results:
+        return "No healthcare professionals found for the given criteria."
     
     # Format results
     formatted_results = []
     for hcp in results:
-        status = "Contacted" if hcp.get('contacted') else "Not Contacted"
         formatted_results.append(
-            f"ID: {hcp.get('hcp_id')} | {hcp.get('name')} | {hcp.get('specialty')} | "
-            f"{hcp.get('city')} | {hcp.get('preferred_channel')} | {status}"
+            f"Name: {hcp.get('name')} | Phone: {hcp.get('phone', 'N/A')} | Website: {hcp.get('website', 'N/A')}"
         )
     
-    return "\n".join(formatted_results) if formatted_results else "No results found."
+    return "\n".join(formatted_results)
 
 def get_specialties():
     """Get unique specialties from the HCP data."""
@@ -48,13 +41,17 @@ def get_cities():
     """Get unique cities from the HCP data."""
     return sorted(nova.hcp_data['city'].unique().tolist())
 
-def generate_message(hcp_id):
+def generate_message(name, specialty, city):
     """Generate a personalized message for an HCP."""
-    return nova._generate_personalized_message(hcp_id)
+    return nova._generate_personalized_message(name, specialty, city)
 
 def record_contact(hcp_id):
     """Record that an HCP has been contacted."""
-    return nova._update_contact_record(hcp_id)
+    try:
+        hcp_id = int(hcp_id)
+        return nova._update_contact_record(hcp_id)
+    except ValueError:
+        return "Error: HCP ID must be a number."
 
 def create_interface():
     """Create the Gradio interface."""
@@ -99,14 +96,16 @@ def create_interface():
             gr.Markdown("### Generate Personalized Outreach")
             
             with gr.Row():
-                hcp_id_input = gr.Textbox(label="HCP ID")
+                hcp_name_input = gr.Textbox(label="HCP Name")
+                hcp_specialty_input = gr.Textbox(label="HCP Specialty")
+                hcp_city_input = gr.Textbox(label="HCP City")
                 generate_button = gr.Button("Generate Message")
             
             outreach_text = gr.Textbox(label="Personalized Message", lines=10)
             
             generate_button.click(
                 generate_message,
-                [hcp_id_input],
+                [hcp_name_input, hcp_specialty_input, hcp_city_input],
                 [outreach_text]
             )
             

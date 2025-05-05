@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.tools import Tool, tool
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
-from langchain.agents import AgentExecutor, create_json_chat_agent
+from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain.tools import StructuredTool
 from pydantic import BaseModel
 
@@ -21,8 +21,9 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
+# Updated to match the actual parameter names in GoogleMapsFinder.search_and_get_details
 class FindHCPsInput(BaseModel):
-    specialty: str
+    query: str
     location: str = ""
 
 class SearchPubMedInput(BaseModel):
@@ -77,7 +78,7 @@ class NovaAgent:
         return [
             StructuredTool.from_function(
                 name="FindHCPs",
-                description="Find healthcare professionals by specialty and location.",
+                description="Find healthcare professionals by specialty and location. Use the specialty as the query parameter.",
                 func=self.maps_finder.search_and_get_details,
                 args_schema=FindHCPsInput
             ),
@@ -138,21 +139,23 @@ class NovaAgent:
         return df.head(10).to_dict(orient='records') if not df.empty else "No HCPs found."
 
     def _create_agent(self):
-        tool_names = [tool.name for tool in self.tools]
+        # Using create_openai_functions_agent for better tool handling
         prompt = ChatPromptTemplate.from_messages([
             ("system", """You are Nova, a specialized AI assistant for pharmaceutical sales and marketing teams.
             You help users discover healthcare professionals (HCPs), research relevant medical content, and generate personalized outreach materials.
-
-            The available tool names are: {tool_names}
-
-            Available tools:
-            {tools}
+            
+            Use the available tools to respond to the user's queries. When a user asks about finding healthcare professionals, 
+            use the FindHCPs tool with the specialty as the query parameter and the location as the location parameter.
+            
+            When asked about medical research, use the SearchMedicalLiterature tool.
+            
+            When providing information about HCPs, be concise and focus on the most relevant information.
             """),
             MessagesPlaceholder(variable_name="chat_history"),
             ("human", "{input}"),
             MessagesPlaceholder(variable_name="agent_scratchpad"),
-        ]).partial(tool_names=tool_names, tools=self.tools)
-        return create_json_chat_agent(llm=self.llm, tools=self.tools, prompt=prompt)
+        ])
+        return create_openai_functions_agent(llm=self.llm, tools=self.tools, prompt=prompt)
 
     def run(self, query):
         return self.agent_executor.invoke({"input": query})["output"]
