@@ -1,0 +1,23 @@
+# Core dependencies
+pandas>=2.0.0
+python-dotenv>=1.0.0
+
+# AI/ML and LangChain
+openai>=1.0.0
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-core>=0.1.0
+pydantic>=2.0.0
+
+# Web interface
+gradio>=4.0.0
+
+# Google Maps integration
+googlemaps>=4.10.0
+
+# PubMed/NCBI integration
+biopython>=1.80
+
+# Optional: For enhanced functionality
+requests>=2.28.0
+urllib3>=1.26.0

@@ -5,6 +5,9 @@ import os
 from Bio import Entrez
 from Bio import Medline  # Correct import for Medline parser
 from urllib.error import HTTPError, URLError
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +16,7 @@ logger = logging.getLogger(__name__)
 # It's good practice to let them know who is using their services.
 # Set your email via the ENTREZ_EMAIL environment variable
 # ENTREZ_EMAIL = "your_email@example.com"
-ENTREZ_EMAIL = os.getenv("ENTREZ_EMAIL", "default_email@example.com")
+ENTREZ_EMAIL = os.getenv("ENTREZ_EMAIL")
 Entrez.email = ENTREZ_EMAIL
 
 # Retrieve NCBI API Key from environment variable
